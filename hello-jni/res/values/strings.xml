@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Face Lock</string>
+    
+    <!-- CameraActivity.java && camera_activity.xml -->
+    <string name="help">You have to take five pictures, one after another in different styles/looks you normally remain</string>
+    <string name="ok_button_of_camera_activity">OK</string>
+    
+    <!-- FaceUnlockActivity.java && face_unlock_activity.xml  -->
+    <string name="face_unlock_activity_name">Face Lock</string>
+    
+    <!-- HelloJniActivity.java && -->
+    <string name="hello_jni_activity_name">Face Lock Application</string>
+    
+    <!-- CameraActivity.java && camera_activity.xml  -->
+    <string name="camera_activity_name">Face Lock Training</string>
+    
+    <!-- PasswordUnlockActivity.java && password_unlock_activity.xml  -->
+    <string name="password_unlock_activity_name">Password Lock</string>
+    <string name="password_tView_of_password_unlock_activity">Password</string>
+    <string name="ok_button_of_password_unlock_activity">OK</string>
+    
+    <!-- ChangePasswordActivity.java && change_password_activity.xml -->
+    <string name="change_password_activity_name">Change Password</string>
+    <string name="old_password_tView_of_change_password_activity">Old Password</string>
+    <string name="new_password_tView_of_change_password_activity">New Password</string>
+    <string name="verify_new_password_tView_of_change_password_activity">Verify New Password</string>
+    <string name="ok_button_of_change_password_activity">OK</string>
+    
+    <!-- EnableFaceLockActivity.java && enable_face_lock_activity.xml -->
+    <string name="enable_face_lock_activity_name">Enable/Disable Password</string>
+    <string name="enable_lock_rButton_of_enable_face_lock_activity">ON</string>
+    <string name="disable_lock_rButton_of_enable_face_lock_activity">OFF</string>
+    <string name="previous_selection_tView_of_enable_face_lock_activity">Previously Selected : </string>
+    <string name="ok_button_of_enable_enable_face_lock_activity">OK</string>
+    
+</resources>

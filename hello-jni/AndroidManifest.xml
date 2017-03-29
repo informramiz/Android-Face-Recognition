@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.hellojni"
+      android:versionCode="1"
+      android:versionName="1.0">
+      
+    <uses-sdk android:minSdkVersion="9" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    
+    <application android:label="@string/app_name"
+                 android:allowBackup="false">
+                 
+        <activity android:name=".HelloJni"
+                  android:label="@string/hello_jni_activity_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".CameraActivity"
+                  android:label="@string/camera_activity_name"
+                  android:permission="android.permission.CAMERA">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".FaceUnlockActivity"
+                  android:label="@string/face_unlock_activity_name">
+        </activity>
+        
+        <activity android:name=".ChangePasswordActivity"
+                  android:label="@string/change_password_activity_name">
+        </activity>
+        
+        <activity android:name=".EnableFaceLockActivity"
+                  android:label="@string/enable_face_lock_activity_name">
+        </activity>
+        
+        <activity
+            android:name="com.example.hellojni.PasswordUnlockActivity"
+            android:label="@string/password_unlock_activity_name" >
+        </activity>
+        
+   	<receiver
+        android:name=".AdminReceiver"
+        android:permission="android.permission.BIND_DEVICE_ADMIN" >
+        <meta-data
+            android:name="android.app.device_admin"
+            android:resource="@xml/device_admin_sample" />
+
+        <intent-filter>
+            <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+        </intent-filter>
+    </receiver>
+    
+    <receiver 
+        android:name=".UnlockReceiver"
+        android:priority="1"
+        android:permission="android.permission.WAKE_LOCK" >
+        
+        <intent-filter android:priority="1">
+           <action android:name="android.intent.action.USER_PRESENT" />
+        </intent-filter>
+        
+    </receiver> 
+    
+    <receiver android:name=".BootReceiver">
+		    <intent-filter android:priority="0">
+		        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		</receiver>
+        
+    </application>
+</manifest> 
